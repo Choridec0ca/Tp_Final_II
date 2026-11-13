@@ -65,7 +65,7 @@ public class Empresa_Alquiler {
         }
         int filas = ConexionDB.EliminarUsuario(dni);
         if (filas == 0) {
-            throw new Valores_Invalidos("No se pudo eliminar el usuario (puede tener reservas o historial)...");
+            throw new Valores_Invalidos("No se pudo eliminar el usuario (puede tener reservas)...");
         }
         usuarios.Eliminar_Registro(usuario);
     }
@@ -115,7 +115,7 @@ public class Empresa_Alquiler {
         }
         int filas = ConexionDB.EliminarVehiculo(patente);
         if (filas == 0) {
-            throw new Valores_Invalidos("No se pudo eliminar el vehiculo (puede tener reservas o historial)...");
+            throw new Valores_Invalidos("No se pudo eliminar el vehiculo (puede tener reservas)...");
         }
         vehiculos.Eliminar_Registro(vehiculo);
     }

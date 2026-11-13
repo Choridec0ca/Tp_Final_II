@@ -331,7 +331,7 @@ public class Main {
         String modelo = Leer_Texto("Modelo: ");
         double tarifa = Leer_Decimal("Tarifa diaria: ");
         if (tipo == 1) {
-            int puertas = Leer_Entero("Cantidad de puertas (3, 4 o 5): ");
+            int puertas = Leer_Entero("Cantidad de puertas (3 o 5): ");
             boolean baul = Leer_Si_No("Tiene baul grande? (s/n): ");
             empresa.Agregar_Vehiculo(new Auto(patente, marca, modelo, tarifa, Estado_Vehiculo.DISPONIBLE, puertas, baul));
         } else {
@@ -377,8 +377,8 @@ public class Main {
                 if (idReserva == 0) {
                     return 0;
                 }
-                empresa.Buscar_Reserva_Para_Devolucion(idReserva);   // si hay problema, lanza excepcion
-                return idReserva;                                     // si llega aca, la reserva es valida
+                empresa.Buscar_Reserva_Para_Devolucion(idReserva);
+                return idReserva;
             } catch (Elemento_No_Encontrado | Valores_Invalidos e) {
                 System.out.println("Error: " + e.getMessage());
                 System.out.println("Vuelva a ingresar el numero de reserva.");

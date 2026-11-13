@@ -331,7 +331,6 @@ public class ConexionDB {
         }
         return filas_afectadas;
     }
-
     public static int EditarTipoUsuarioUsuario(String dni, String tipo_usuario) {
         int filas_afectadas = 0;
         String update = "update usuarios set tipo_usuario = ? where dni = ?";

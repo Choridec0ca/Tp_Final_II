@@ -4,7 +4,7 @@ public class Auto extends Vehiculo {
 
     public Auto(String patente, String marca, String modelo, double tarifaDiaria, Estado_Vehiculo estadoVehiculo, int cantidad_Puertas, boolean baul_grande) throws Valores_Invalidos {
         super(patente, marca, modelo, tarifaDiaria, estadoVehiculo);
-        if(cantidad_Puertas < 3 || cantidad_Puertas > 5){throw new Valores_Invalidos("Numero de puertas invalido (tiene que ser 3, 4 o 5)...");}
+        if(cantidad_Puertas != 3 && cantidad_Puertas != 5){throw new Valores_Invalidos("Numero de puertas invalido (tiene que ser 3, 4 o 5)...");}
         this.cantidad_Puertas = cantidad_Puertas;
         this.baul_grande = baul_grande;
     }
